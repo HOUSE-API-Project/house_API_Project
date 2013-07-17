@@ -1,0 +1,13 @@
+{
+    "status": "OK", 
+    "name": null, 
+    "powerperband": {
+        "high": -61.566532641029085, 
+        "low": -45.83218297178076, 
+        "mid": -45.351050504404107
+    }, 
+    "signal_db": -2.9098185122378384, 
+    "time": 1373838791, 
+    "device": "USB Audio CODEC: USB Audio (hw:1,0)", 
+    "peak_hz": 1032.0
+}
