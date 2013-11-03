@@ -9,12 +9,12 @@ necIXInternalTemperatureOID = "1.3.6.1.4.1.9.9.273.1.1.2.1.1"
 arpcachetablesOID = "1.3.6.1.2.1.3.1.1.2"
 cachetablesOID = "1.3.6.1.2.1.3.1.1.2"
 Fluent::Logger::FluentLogger.open(nil, :host=>'133.242.144.202', :port=>19999)
-
+community_pass = 'wifi_community_password'
 
 while(true) 
   clients = 0
   temperature = 0
-    SNMP::Manager.open(:host=>'172.16.0.253', :community=>'public1', :version=>:SNMPv2c,) do |manager|
+    SNMP::Manager.open(:host=>'172.16.0.253', :community=>community_pass', :version=>:SNMPv2c,) do |manager|
 
       #wifi connecting clients
       manager.walk(arpcachetablesOID) do |row|
