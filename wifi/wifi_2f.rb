@@ -8,6 +8,9 @@ counter = 0
 twof_wifi_clients_low = 0
 twof_wifi_clients_high = 0
 community_pass = "COMMUNITY_PASSWORD"
+basicID = "BASICID"
+basicPASS = "BASICPASS"
+post_url = 'http://'<< basicID << ':' << basicPASS << '@133.242.144.202/post'
 
 SNMP::Manager.open(:host=>wifi_twof_host, :community=>community_pass, :version=>:SNMPv2c,) do |manager|
       manager.walk(twof_wifi_clients) do |row|
@@ -22,15 +25,15 @@ SNMP::Manager.open(:host=>wifi_twof_host, :community=>community_pass, :version=>
       twof_wifi_all_clients = twof_wifi_clients_low.to_i + twof_wifi_clients_high.to_i
   json = {"all_clients" => "#{twof_wifi_all_clients}", "clients_low_speed" => "#{twof_wifi_clients_low}", "clients_high_speed" => "#{twof_wifi_clients_high}"}
       tag = "shibuhouse.wifi.2f.clients"
-  response = RestClient.post('http://houseapi:kogaidan@133.242.144.202/post', {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
+  response = RestClient.post(post_url , {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
 
       #lowspeed send
   json = {"clients_low_speed" => "#{twof_wifi_clients_low}"}
       tag = "shibuhouse.wifi.2f.clients_low_speed"
-  response = RestClient.post('http://houseapi:kogaidan@133.242.144.202/post', {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
+  response = RestClient.post(post_url , {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
 
       #highspeed send
   json = {"clients_high_speed" => "#{twof_wifi_clients_high}"}
       tag = "shibuhouse.wifi.2f.clients_high_speed"
-  response = RestClient.post('http://houseapi:kogaidan@133.242.144.202/post', {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
+  response = RestClient.post(post_url , {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
 end

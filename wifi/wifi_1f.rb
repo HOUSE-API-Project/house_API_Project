@@ -9,6 +9,9 @@ id = "shibuhouse"
 clients_low = 0
 clients_high = 0
 community_pass = "COMMUNITY_PASSWORD"
+basicID = "BASICID"
+basicPASS = "BASICPASS"
+post_url = 'http://'<< basicID << ':' << basicPASS << '@133.242.144.202/post'
 
 SNMP::Manager.open(:host=>host_onef, :community=>community_pass, :version=>:SNMPv1,) do |manager|
    response = manager.get([onef_wifi])
@@ -18,7 +21,7 @@ SNMP::Manager.open(:host=>host_onef, :community=>community_pass, :version=>:SNMP
          #puts clients
   json = {"clients_low" => "#{clients_low}", "locational_time" => "#{locational_time}"}
     tag = "shibuhouse.wifi.1f.clients_low_speed"
-  response = RestClient.post('http://houseapi:kogaidan@133.242.144.202/post', {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
+  response = RestClient.post(post_url, {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
 
    response = manager.get([onef_wifi_highspeed])
   response.each_varbind { |v|
@@ -26,11 +29,11 @@ SNMP::Manager.open(:host=>host_onef, :community=>community_pass, :version=>:SNMP
   }
     json = {"clients_high" => "#{clients_high}","locational_time" => "#{locational_time}"}
     tag = "shibuhouse.wifi.1f.clients_high_speed"
-  response = RestClient.post('http://houseapi:kogaidan@133.242.144.202/post', {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
+  response = RestClient.post(post_url, {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
 
 
   clients_all = clients_low.to_i + clients_high.to_i
       json = {"all_clients" => "#{clients_all}", "clients_high_speed" => "#{clients_high}", "clients_low_speed" => "#{clients_low}", "locational_time" => "#{locational_time}"}
     tag = "shibuhouse.wifi.1f.clients"
-  response = RestClient.post('http://houseapi:kogaidan@133.242.144.202/post', {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
+  response = RestClient.post(post_url, {:tag => tag, :data => json},{:content_type => :json, :accept => :json})
 end
