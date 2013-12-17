@@ -26270,7 +26270,7 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <parts>
 <part name="T1" library="opto-trans-siemens" deviceset="BPX81" device="" value="NJL7502L"/>
 <part name="R3" library="akihabara" deviceset="R-US_" device="0207/2V" value="1k±1%"/>
-<part name="R1" library="akihabara" deviceset="R-US_" device="0207/2V" value="2.2k"/>
+<part name="R1" library="akihabara" deviceset="R-US_" device="0207/2V" value="1k"/>
 <part name="R5" library="akihabara" deviceset="R-US_" device="0207/2V" value="1k±1%"/>
 <part name="R6" library="akihabara" deviceset="R-US_" device="0207/2V" value="10k±1%"/>
 <part name="R2" library="akihabara" deviceset="R-US_" device="0207/10" value="100k"/>
@@ -26291,7 +26291,7 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="LUX2" library="con-lstb" deviceset="MA03-1" device="" value="LUX"/>
-<part name="R7" library="akihabara" deviceset="R-US_" device="0207/2V" value="2.2k"/>
+<part name="R7" library="akihabara" deviceset="R-US_" device="0207/2V" value="1k"/>
 <part name="R8" library="akihabara" deviceset="R-US_" device="0204/7" value="100k"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="PIN" library="con-lstb" deviceset="MA13-2" device="" value="ToRpi"/>
@@ -26338,23 +26338,23 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <part name="DOR1" library="con-lstb" deviceset="MA03-1" device="" value="DOR"/>
 <part name="SUPPLY23" library="supply2" deviceset="GND" device=""/>
 <part name="+3V11" library="supply1" deviceset="+3V3" device=""/>
-<part name="R28" library="akihabara" deviceset="R-US_" device="0204/2V" value="100k"/>
-<part name="C11" library="akihabara" deviceset="C-EU" device="050-024X044" value=".1uF"/>
+<part name="R28" library="akihabara" deviceset="R-US_" device="0204/2V" value="10k"/>
+<part name="C11" library="akihabara" deviceset="C-EU" device="050-024X044" value="1u"/>
 <part name="SUPPLY24" library="supply2" deviceset="GND" device=""/>
 <part name="PILOT" library="eagle-ltspice" deviceset="LED_E" device="LD260" value="LED"/>
 <part name="R14" library="akihabara" deviceset="R-US_" device="0204/2V" value="1k"/>
 <part name="SUPPLY27" library="supply2" deviceset="GND" device=""/>
-<part name="L1" library="inductors" deviceset="LBC-SE" device="" value="47uH"/>
+<part name="L1" library="inductors" deviceset="LBC-SE" device="" value="47u"/>
 <part name="R29" library="akihabara" deviceset="R-US_" device="0207/5V" value="1k"/>
 <part name="D2" library="1-diode" deviceset="DIODE_V" device="" value="Schottky"/>
 <part name="D1" library="1-diode" deviceset="DIODE_V" device="" value="Schottky"/>
 <part name="DOR2" library="con-lstb" deviceset="MA03-1" device="" value="DOR"/>
 <part name="SUPPLY25" library="supply2" deviceset="GND" device=""/>
 <part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
-<part name="R30" library="akihabara" deviceset="R-US_" device="0204/2V" value="100k"/>
-<part name="C12" library="akihabara" deviceset="C-EU" device="050-024X044" value=".1uF"/>
+<part name="R30" library="akihabara" deviceset="R-US_" device="0204/2V" value="10k"/>
+<part name="C12" library="akihabara" deviceset="C-EU" device="050-024X044" value="1u"/>
 <part name="SUPPLY26" library="supply2" deviceset="GND" device=""/>
-<part name="L2" library="inductors" deviceset="LBC-SE" device="" value="47uH"/>
+<part name="L2" library="inductors" deviceset="LBC-SE" device="" value="47u"/>
 <part name="R31" library="akihabara" deviceset="R-US_" device="0207/5V" value="1k"/>
 <part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
 <part name="LUX1" library="con-lstb" deviceset="MA03-1" device="" value="LUX"/>
@@ -26404,7 +26404,6 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <sheets>
 <sheet>
 <plain>
-<text x="27.94" y="-224.79" size="1.778" layer="91">fc=33Hz</text>
 <text x="-5.08" y="77.47" size="1.778" layer="91" align="bottom-right">NJL7502L C
 NJL7502L E
 N/C GND</text>
