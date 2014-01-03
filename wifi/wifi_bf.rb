@@ -8,7 +8,7 @@ bf_wifi_clients = 0
 community_pass = "COMMUNITY_PASSWORD"
 basicID = "BASICID"
 basicPASS = "BASICPASS"
-post_url = 'http://'<< basicID << ':' << basicPASS << '@133.242.144.202/post'
+post_url = 'http://'<< basicID << ':' << basicPASS << '@house-api-project.org/post'
 
 SNMP::Manager.open(:host=>wifi_twof_host, :community=>community_pass, :version=>:SNMPv2c,) do |manager|
       manager.walk(twof_wifi_clients) do |row|

@@ -11,7 +11,7 @@ clients_high = 0
 community_pass = "COMMUNITY_PASSWORD"
 basicID = "BASICID"
 basicPASS = "BASICPASS"
-post_url = 'http://'<< basicID << ':' << basicPASS << '@133.242.144.202/post'
+post_url = 'http://'<< basicID << ':' << basicPASS << '@house-api-project.org/post'
 
 SNMP::Manager.open(:host=>host_onef, :community=>community_pass, :version=>:SNMPv1,) do |manager|
    response = manager.get([onef_wifi])

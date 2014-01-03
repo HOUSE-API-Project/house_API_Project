@@ -10,7 +10,7 @@ id = "shibuhouse"
 community_pass = "COMMUNITY_PASSWORD"
 basicID = "BASICID"
 basicPASS = "BASICPASS"
-post_url = 'http://'<< basicID << ':' << basicPASS << '@133.242.144.202/post'
+post_url = 'http://'<< basicID << ':' << basicPASS << '@house-api-project.org/post'
 
 
   clients = 0
