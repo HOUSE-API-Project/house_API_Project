@@ -2,11 +2,12 @@ crontab edit
 
 in case at the /home/pi directory.
 
-git clone git@github.com:HOUSE-API-Project/house_API_Project.git
+`git clone git@github.com:HOUSE-API-Project/house_API_Project.git`  
+`crontab -e`
 
-crontab -e
+ant then
 
-* * * * * /usr/bin/ruby /home/pi/house_API_Project/wifi/wifi_3f.rb
+* * * * * /usr/bin/ruby /home/pi/house_API_Project/wifi/wifi_3f.rb  
 * * * * * python /home/pi/ayafuji_work/house_API_Project/temperature/ds18b20.py
 * * * * * /usr/bin/ruby /home/pi/ayafuji_work/house_API_Project/temperature/temperature.rb
 * * * * * /usr/bin/ruby /home/pi/house_API_Project/wifi/wifi_1f.rb
